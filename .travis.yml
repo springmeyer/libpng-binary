@@ -1,0 +1,21 @@
+language: cpp
+
+compiler:
+ - gcc
+
+env:
+  matrix:
+    - PLATFORM=Linux PUBLISH=true QUIET=true
+
+before_install:
+ - true
+
+install:
+ - true
+
+before_script:
+ - true
+
+script:
+ - source ./build.sh
+ - build png
