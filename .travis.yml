@@ -1,10 +1,10 @@
-language: cpp
+language: objective-c
 compiler:
 - gcc
 - clang
 env:
   matrix:
-  - PLATFORM=Linux PUBLISH=true QUIET=true
+  - PLATFORM=MacOSX PUBLISH=true QUIET=true
   global:
   - secure: JxuoJdqNFaAyhPc/Mwf3XIxAlBTxdJZdGhvyf7Csex2rzMHps7rpkPx7YCy/QOsszfg5ehKDuB/uRC/NvwaPIrh+qiNh/Sm+QhB4kALPeOvjqcy3gFiddvicDNQ9GO9tvF7b2TM9ibIALZ3ne8RSX48ZN96uteiMuEI0DQ4Klxk=
   - secure: Br/fhQ2phhat871P2AudqtovOlnlTxId4vr4klKjj1E5oBV46qvCmfqE+yzWHscvcX/yGo23GaZzz/9NKPelogW0NArPEUVtCJ3VRqYtYuUDLLX3PxzdaA4YC8JNTFB2bwJNvN9WMSMAMQlpPoFIWV0LqLY3sCUkXt4/nHUjn3U=
@@ -15,4 +15,7 @@ install:
 before_script:
 - true
 script:
-- source ./all.sh
+# recheckout the branch so that 'git branch -r' works
+- git clone git://github.com/${TRAVIS_REPO_SLUG}.git repo
+- cd repo && git checkout $TRAVIS_BRANCH
+- source ../all.sh
