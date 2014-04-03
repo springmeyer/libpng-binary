@@ -22,7 +22,7 @@ function q {
 
 function prepare {
   if [[ $UNAME == 'Linux' ]]; then
-    sudo apt-get update -y -qq
+    sudo apt-get update && sudo apt-get upgrade
     sudo apt-get install -qq -y zlib1g-dev
     sudo apt-get purge -qq -y libpng*
     sudo apt-get autoremove -y -qq
