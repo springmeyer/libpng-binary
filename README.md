@@ -2,6 +2,8 @@
 
 Building libpng for other apps to statically link to.
 
+[![Build Status](https://secure.travis-ci.org/springmeyer/libpng-binary.png)](https://travis-ci.org/springmeyer/libpng-binary)
+
 # Setup
 
  - edit TARGET in .travis.yml
