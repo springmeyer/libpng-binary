@@ -21,11 +21,6 @@ function q {
 }
 
 function prepare {
-  if [[ $UNAME == 'Linux' ]]; then
-    sudo apt-get update
-    sudo apt-get install -y zlib1g-dev
-    sudo apt-get autoremove -y
-  fi
   if [ ! -d mapnik-packaging ]; then
     git clone --depth 1 https://github.com/mapnik/mapnik-packaging.git
   fi

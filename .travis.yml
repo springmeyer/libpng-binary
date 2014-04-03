@@ -9,7 +9,8 @@ env:
   - secure: JxuoJdqNFaAyhPc/Mwf3XIxAlBTxdJZdGhvyf7Csex2rzMHps7rpkPx7YCy/QOsszfg5ehKDuB/uRC/NvwaPIrh+qiNh/Sm+QhB4kALPeOvjqcy3gFiddvicDNQ9GO9tvF7b2TM9ibIALZ3ne8RSX48ZN96uteiMuEI0DQ4Klxk=
   - secure: Br/fhQ2phhat871P2AudqtovOlnlTxId4vr4klKjj1E5oBV46qvCmfqE+yzWHscvcX/yGo23GaZzz/9NKPelogW0NArPEUVtCJ3VRqYtYuUDLLX3PxzdaA4YC8JNTFB2bwJNvN9WMSMAMQlpPoFIWV0LqLY3sCUkXt4/nHUjn3U=
 before_install:
-- true
+ - UNAME=$(uname -s)
+ - if [[ $UNAME == 'Linux' ]]; then sudo apt-get update; sudo apt-get install -y zlib1g-dev; fi
 install:
 - true
 before_script:
