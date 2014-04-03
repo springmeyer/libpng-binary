@@ -16,5 +16,4 @@ before_script:
 - true
 script:
 - source ./build.sh
-- BRANCH_NAME=`git rev-parse --abbrev-ref HEAD`
-- build ${BRANCH_NAME}
+- build ${TRAVIS_BRANCH}
