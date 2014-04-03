@@ -4,7 +4,7 @@ compiler:
 - clang
 env:
   matrix:
-  - TARGET=png PLATFORM=Linux PUBLISH=true QUIET=true
+  - TARGET=jpeg_turbo PLATFORM=Linux PUBLISH=true QUIET=true
   global:
   - secure: JxuoJdqNFaAyhPc/Mwf3XIxAlBTxdJZdGhvyf7Csex2rzMHps7rpkPx7YCy/QOsszfg5ehKDuB/uRC/NvwaPIrh+qiNh/Sm+QhB4kALPeOvjqcy3gFiddvicDNQ9GO9tvF7b2TM9ibIALZ3ne8RSX48ZN96uteiMuEI0DQ4Klxk=
   - secure: Br/fhQ2phhat871P2AudqtovOlnlTxId4vr4klKjj1E5oBV46qvCmfqE+yzWHscvcX/yGo23GaZzz/9NKPelogW0NArPEUVtCJ3VRqYtYuUDLLX3PxzdaA4YC8JNTFB2bwJNvN9WMSMAMQlpPoFIWV0LqLY3sCUkXt4/nHUjn3U=
